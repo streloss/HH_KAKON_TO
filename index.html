@@ -10,10 +10,20 @@
       font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #000000, #1c1c1c);
       color: white;
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
     header {
       padding: 40px 20px;
       text-align: center;
+      animation: slideDown 1s ease-out;
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
     header h1 {
       font-size: 42px;
@@ -30,6 +40,11 @@
       margin: 20px auto;
       overflow: hidden;
       border: 4px solid #ff0050;
+      animation: zoomIn 1s ease;
+    }
+    @keyframes zoomIn {
+      from { transform: scale(0.7); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
     }
     .avatar img {
       width: 100%;
@@ -40,6 +55,11 @@
       padding: 30px 20px;
       max-width: 900px;
       margin: auto;
+      animation: fadeUp 1.2s ease;
+    }
+    @keyframes fadeUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
     .stats {
       display: flex;
@@ -69,7 +89,9 @@
       margin-top: 30px;
     }
     .buttons a {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
       margin: 10px;
       padding: 14px 26px;
       border-radius: 30px;
@@ -80,8 +102,13 @@
       transition: transform 0.2s, background 0.2s;
     }
     .buttons a:hover {
-      transform: scale(1.05);
+      transform: scale(1.08);
       background: #ff2b6a;
+    }
+    .buttons svg {
+      width: 20px;
+      height: 20px;
+      fill: white;
     }
     footer {
       text-align: center;
@@ -95,31 +122,37 @@
 
 <header>
   <div class="avatar">
-    <img src="avatar.jpeg" alt="Аватар">
+    <img src="avatar.png" alt="Аватар тиктокера">
   </div>
-  <h1>@HH_KAKON_TO</h1>
+  <h1>ТГК::Шахта Лифта</h1>
   <p>Мемы • Развлечения • Шипы • Арты</p>
 </header>
 
 <section>
   <div class="stats">
     <div class="card">
-      <h2>2169</h2>
+      <h2>1M</h2>
       <p>Подписчиков</p>
     </div>
     <div class="card">
-      <h2>59.3K</h2>
+      <h2>25M</h2>
       <p>Лайков</p>
     </div>
     <div class="card">
-      <h2>24</h2>
+      <h2>350</h2>
       <p>Видео</p>
     </div>
   </div>
 
   <div class="buttons">
-    <a href="https://www.tiktok.com/@hh_kakon_to_lk" target="_blank">TikTok</a>
-    <a href="https://t.me/HH_KAKON_TO_XD" target="_blank">Telegram</a>
+    <a href="https://www.tiktok.com/@hh_kakon_to_lk" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M12.7 2h2.1c.3 1.6 1.2 3.1 2.6 4.1 1.1.8 2.3 1.3 3.6 1.4v2.2c-1.3 0-2.6-.3-3.8-.9-.8-.4-1.6-1-2.3-1.7v7.5c0 3.1-2.5 5.6-5.6 5.6S4 17.7 4 14.6c0-3.1 2.5-5.6 5.6-5.6.6 0 1.2.1 1.8.3v2.4c-.5-.2-1.1-.4-1.8-.4-1.9 0-3.4 1.5-3.4 3.4s1.5 3.4 3.4 3.4 3.4-1.5 3.4-3.4V2z"/></svg>
+      TikTok
+    </a>
+    <a href="https://t.me/HH_KAKON_TO_XD" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M9.04 15.47l-.39 5.52c.56 0 .8-.24 1.1-.53l2.64-2.52 5.48 4c1 .55 1.72.26 1.97-.93l3.57-16.74h0c.3-1.42-.52-1.98-1.5-1.62L1.33 9.57c-1.38.54-1.36 1.31-.24 1.66l4.56 1.42L18.8 5.5c.62-.41 1.18-.18.72.23"/></svg>
+      Telegram
+    </a>
   </div>
 </section>
 
